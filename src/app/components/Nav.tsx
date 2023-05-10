@@ -13,17 +13,17 @@ export default function Nav() {
           </li>
           <li className={styles.navbarItem}>
             <Link href="/about" className={styles.navbarLink}>
-              about
+              About
             </Link>
           </li>
           <li className={styles.navbarItem}>
             <Link href="/movie" className={styles.navbarLink}>
-              movie
+              Movie
             </Link>
           </li>
           <li className={styles.navbarItem}>
             <Link href="/contact" className={styles.navbarLink}>
-              contact
+              Contact
             </Link>
           </li>
         </ul>
