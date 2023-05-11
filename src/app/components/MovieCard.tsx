@@ -5,10 +5,7 @@ export default function MovieCard(movie: any) {
   const { id, type, title, synopsis } = movie.jawSummary;
   console.log({ movie });
   return (
-    <div
-      className={styles.card}
-      style={{ marginLeft: "60px", marginBottom: "2rem" }}
-    >
+    <div className={styles.card}>
       <div className={styles.card_image}>
         <Image
           src={movie.jawSummary.backgroundImage.url}
@@ -18,8 +15,8 @@ export default function MovieCard(movie: any) {
         />
       </div>
       <div className={styles.card_data}>
-        <h2>{title}</h2>
-        <p>{synopsis}</p>
+        <h2>{title.substring(0, 18)}</h2>
+        <p>{synopsis.substring(0, 66)}...</p>
         <Link href={`/movie/${id}`}>
           <button>Read More</button>
         </Link>
