@@ -5,10 +5,16 @@ import Nav from "./Nav";
 
 export default function Header() {
   return (
-    <header className={styles.main_header}>
+    <header className={styles.main_header} style={{ height: "80px" }}>
       <div className={styles.navbar_brands}>
         <Link href="/">
-          <Image src="/logo.png" height={30} width={100} alt="logo" />
+          <h2>
+            {" "}
+            <span style={{ color: "red", fontWeight: "bold" }}>
+              Netflix
+            </span>{" "}
+            Beta
+          </h2>
         </Link>
       </div>
       <Nav />

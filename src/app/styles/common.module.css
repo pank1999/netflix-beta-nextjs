@@ -11,7 +11,7 @@
 .container{
     max-width: 140rem;
     margin:0 auto;
-    padding: 6rem 3rem;
+    padding: 0rem 3rem;
 }
 
 .grid_two_section{
@@ -21,7 +21,7 @@
     height: 60rem;
 }
 
-.movieSection h1{
+.movieSection h2{
     text-align: center;
     margin-bottom: 3.2rem;
 }
@@ -38,7 +38,7 @@
 .card_section{
     width: 100%;
     display: flex;
-    gap: 4.8rem;
+    gap: 2.8rem;
     justify-content: space-between;
     align-items: center;
     /*background-color: #90caf9;*/

@@ -76,7 +76,7 @@ ol, li {
 
 /* CSS */
 button {
-    background-color: #161617;
+    background-color: #3b3b76;
     border-radius: 2.4rem;
     border-style: none;
     box-sizing: border-box;
@@ -98,8 +98,8 @@ button {
 
 button:hover {
     background-color: #fff;
-    border: .1rem solid #161617;
-    color: #161617;
+    border: .1rem solid #3b3b76;
+    color: #3b3b76;
     transition-duration: .1s;
 }
 

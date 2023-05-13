@@ -24,7 +24,7 @@ export default async function Movie() {
   return (
     <section className={styles.movieSection}>
       <div className={styles.container}>
-        <h1>Series & Movies</h1>
+        <h2>Series & Movies</h2>
         <div className={styles.card_section}>
           {data.map((movie: any) => {
             return <MovieCard key={movie.id} {...movie} />;
