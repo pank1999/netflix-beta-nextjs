@@ -2,7 +2,9 @@ import MovieCard from "../components/MovieCard";
 import styles from "@/app/styles/common.module.css";
 export default async function Movie() {
   await new Promise((resolve) => setTimeout(resolve, 1500));
-  const url = process.env.RAPID_URL;
+  const url =
+    process.env.RAPID_URL ||
+    "a559f6c54cmsh6cc81f76aa393f6p1fe495jsnb1d9359c586e";
 
   const options = {
     method: "GET",
