@@ -10,8 +10,7 @@ export default function Contact() {
       <ContactCard />
       <section className={styles.contact_section}>
         <h2>
-          {" "}
-          We'd love to here <span>from you </span>{" "}
+          We love to here <span>from you </span>
         </h2>
         <ContactForm />
       </section>
