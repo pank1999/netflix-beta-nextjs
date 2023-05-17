@@ -1,6 +1,6 @@
 import React from "react";
 import ContactCard from "../components/ContactCard";
-import styles from "./Contact.module.css";
+import styles from "./contact.module.css";
 import ContactForm from "../components/ContactForm";
 
 export default function Contact() {
