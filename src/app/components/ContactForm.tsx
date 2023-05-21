@@ -7,9 +7,11 @@ export default function ContactForm() {
   const [user, setUser] = useState({
     username: "",
     email: "",
-    phone: "",
+    phone: 0,
     message: "",
   });
+
+  const [status, setStatus] = useState(null);
 
   const handleChange = (e: any) => {
     const name = e.target.name;
@@ -18,7 +20,37 @@ export default function ContactForm() {
     console.log(user);
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log({ user });
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { Content_Type: "application/json" },
+        body: JSON.stringify({
+          username: user.username,
+          email: user.email,
+          phone: user.phone,
+          message: user.message,
+        }),
+      });
+      // Set the status based on the response from the API route
+      if (response.status === 200) {
+        setUser({
+          username: "",
+          email: "",
+          phone: 0,
+          message: "",
+        });
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   return (
     <form className={styles.contact_form} onSubmit={handleSubmit}>
       <div className={styles.input_field}>
@@ -30,6 +62,8 @@ export default function ContactForm() {
             id="username"
             placeholder="Enter your name"
             value={user.username}
+            onChange={handleChange}
+            required
           />
         </label>
       </div>
@@ -43,6 +77,7 @@ export default function ContactForm() {
             placeholder="Enter your email"
             value={user.email}
             onChange={handleChange}
+            required
           />
         </label>
       </div>
@@ -55,6 +90,8 @@ export default function ContactForm() {
             id="phone"
             placeholder="Enter your phone number"
             value={user.phone}
+            onChange={handleChange}
+            required
           />
         </label>
       </div>
@@ -67,11 +104,22 @@ export default function ContactForm() {
             placeholder="Enter your message"
             rows={5}
             value={user.message}
+            onChange={handleChange}
+            required
           />
         </label>
       </div>
       <div>
-        <button type="button">Send Message</button>
+        {status === "success" && (
+          <p className={styles.success_msg}>Thank you for your message!</p>
+        )}
+        {status === "error" && (
+          <p className={styles.error_msg}>
+            There was an error submitting your message. Please try again.
+          </p>
+        )}
+
+        <button type="submit">Send Message</button>
       </div>
     </form>
   );
