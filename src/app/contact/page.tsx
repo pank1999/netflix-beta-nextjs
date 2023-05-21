@@ -6,7 +6,7 @@ import ContactForm from "../components/ContactForm";
 export default function Contact() {
   return (
     <div>
-      <h2 style={{ textAlign: "center" }}>Contact Us</h2>
+      <h2 style={{ textAlign: "center", padding: "2rem" }}>Contact Us</h2>
       <ContactCard />
       <section className={styles.contact_section}>
         <h2>
