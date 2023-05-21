@@ -5,7 +5,7 @@ import Nav from "./Nav";
 
 export default function Header() {
   return (
-    <header className={styles.main_header} style={{ height: "80px" }}>
+    <header className={styles.main_header} style={{ height: "100px" }}>
       <div className={styles.navbar_brands}>
         <Link href="/">
           <h2>
