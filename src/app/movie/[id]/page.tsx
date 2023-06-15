@@ -26,12 +26,12 @@ export default async function page({ params }: any) {
         Netflix \ <span>{data.type}</span>{" "}
       </h2>
       <div className={styles.card_section}>
-        <div>
+        <div className={styles.card_image}>
           <Image
             src={data.backgroundImage.url}
             alt={data.title}
-            height={300}
             width={600}
+            height={300}
           />
         </div>
         <div>

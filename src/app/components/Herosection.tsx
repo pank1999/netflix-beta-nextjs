@@ -10,7 +10,7 @@ export default function HeroSection({ title, imageUrl }: any) {
         <div className={styles.grid_two_section}>
           <div className={heroStyle.hero_content}>
             <h1>{title}</h1>
-            <p>
+            <p className={heroStyle.paragraph}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
               nesciunt quisquam, nobis voluptatem ipsam delectus dolorum quasi
               iste est mollitia fugit excepturi expedita ut suscipit
